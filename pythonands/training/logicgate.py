@@ -93,7 +93,7 @@ class NotGate(UnaryGate):
 	def __init__(self, n):
 		UnaryGate.__init__(self, n)
 
-	def prerformGateLogic(self):
+	def performGateLogic(self):
 		if self.getPin():
 			return 0
 		else:
@@ -116,14 +116,20 @@ class Connector:
 
 
 def main():
+
+	'''
 	g1 = AndGate("G1")
 	g2 = AndGate("G2")
+	'''
 	g3 = OrGate("G3")
 	g4 = NotGate("G4")
-	C1 = Connector(g1,g3)
+	'''Î
+	c1 = Connector(g1,g3)
 	c2 = Connector(g2,g3)
+	'''
+	#print(g3.getOutput())
 	c3 = Connector(g3,g4)
-	print(g4.getOutput)
+	print(g4.getOutput())
 
 main()
 
